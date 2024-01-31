@@ -10,10 +10,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 <body>
-    <h1>Desafio Git Numeros</h1>
-<div id="result">
+    <h1 class="text-center text-danger-emphasis text-uppercase fw-bold">Desafio Git Numeros</h1>
+<div class="fs-2  col-3 mx-auto" id="result">
 </div>
-<input type="button" id="btn1" value="Agregar Número"/>
+<input class="btn btn-primary d-grid gap-2 col-2 mx-auto mt-5" type="button" id="btn1" value="Agregar Número"/>
 
 <script>
 $('#btn1').on( "click", function() {
@@ -26,9 +26,9 @@ $('#btn1').on( "click", function() {
             console.log("****************")
         }
 
-        for (var j = 1; j <= 10; j++) {
+        for (var j = 1; j <= numero; j++) {
             console.log(i + " x " +  j + " = " +  (i*j));
-            $('#result').append(i + " x " +  j + " = " +  (i*j)+"<br>");
+            $('#result').append(i + " x " +  j + " = " + "<b>" + (i*j) + "<b>" +"<br>");
         }
 
         let factorial = 1;
@@ -36,11 +36,11 @@ $('#btn1').on( "click", function() {
             factorial *= k;
         }
         
-        $('#result').append("Factorial de " + numero + ": " + factorial);
+        $('#result').append("Factorial de " + numero + " = " + "<b>" + factorial + "<b>");
         console.log("Factorial de " + numero + ": " + factorial)
 
      } else {
-         alert("Número fuera de rango"); 
+         alert("Número fuera de rango. Favor ingresar número entre 1 y 20"); 
      }
 });
 
